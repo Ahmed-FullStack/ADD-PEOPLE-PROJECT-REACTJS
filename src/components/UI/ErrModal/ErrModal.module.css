@@ -1,0 +1,110 @@
+body.freeze-scroll {
+	overflow: hidden;
+}
+
+@keyframes model-open {
+	0% {
+		transform: scale(0.15);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes modal-close {
+	0% {
+		visibility: visible;
+		transform: scale(1);
+	}
+	100% {
+		visibility: hidden;
+		transform: scale(0);
+	}
+}
+
+.btn {
+	border: 0;
+	padding: 0.8em 1.2em;
+	background-color: hsl(209, 59%, 88%);
+	border-radius: 8px;
+	font-weight: 500;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 200ms ease;
+}
+
+.btn:hover {
+	background-color: rgba(151, 201, 245, 0.849);
+}
+.btn:active,
+.btn:focus-within {
+	background-color: rgb(55, 162, 255);
+}
+
+.modal-box {
+	z-index: 90;
+	position: fixed;
+	bottom: 0;
+	-webkit-user-drag: none;
+	top: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+	right: 0;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 2em;
+	border-radius: 20px;
+	background-color: aliceblue;
+	color: #000;
+	width: min(560px, 88%);
+	box-shadow: 0 9px 40px hsl(0 0% 0% / 0.3);
+}
+
+.modal-box.show {
+	visibility: visible;
+	animation: model-open 300ms ease forwards;
+}
+
+.modal-box.disappear {
+	animation: modal-close 250ms ease forwards;
+}
+
+.backdrop {
+	z-index: 89;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	backdrop-filter: blur(6px);
+	transition: backdrop-filter 200ms ease-out;
+	visibility: hidden;
+	background-color: hsl(0 0% 0% / 0.3);
+}
+.text-wrapper {
+	width: min(80%, 355px);
+}
+.text-wrapper > p {
+	word-break: break-all;
+}
+.backdrop.appear {
+	visibility: visible;
+}
+
+.backdrop.disappear {
+	visibility: hidden;
+}
+
+.false {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	background-color: rgb(118, 184, 238);
+}
+.relative {
+	position: absolute;
+}

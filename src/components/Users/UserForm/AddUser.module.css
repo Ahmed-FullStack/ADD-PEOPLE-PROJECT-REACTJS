@@ -1,0 +1,22 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	padding: 2em 2em;
+	background-color: hsl(217 20% 20%);
+	color: #fff;
+	margin: 2em auto;
+}
+.input-flex {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	flex-basis: 50%;
+	margin: 0;
+}
+
+.form-btn {
+	align-self: flex-end;
+	margin-left: auto;
+	background-color: hsl(217 100% 80%);
+}

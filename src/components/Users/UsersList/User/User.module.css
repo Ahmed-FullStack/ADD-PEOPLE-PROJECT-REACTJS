@@ -1,0 +1,29 @@
+.card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 2em;
+	padding-right: 2em;
+	background-color: hsl(217 100% 93%);
+	min-height: 100px;
+}
+.card__info {
+	display: flex;
+	align-items: center;
+	gap: 0.8em;
+}
+.card__info > * {
+	margin: 0;
+}
+
+.card__btn {
+	border-radius: 10px;
+	background-color: rgb(107, 221, 103);
+	transition: background-color 200ms ease-out, transform 60ms ease-out;
+}
+.card__btn:hover {
+	background-color: hsl(118, 63%, 59%);
+}
+.card__btn:active {
+	transform: scale(0.7);
+}

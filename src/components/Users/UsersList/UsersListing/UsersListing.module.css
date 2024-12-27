@@ -1,0 +1,18 @@
+.card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 2em 0;
+	background-color: hsl(217 20% 20%);
+}
+
+.card-container.padding {
+	padding: 2em;
+	color: #fff;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.padding > * {
+	margin: 0;
+}
